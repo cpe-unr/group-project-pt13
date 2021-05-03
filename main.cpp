@@ -1,6 +1,10 @@
 /** @file */
+#include "readwav.h"
+#include "metadata.h"
 #include <iostream>
-
+#include <fstream>
+#include <string>
+using namespace std;
 /**
  * \brief   The function bar.
  *
@@ -25,7 +29,11 @@ void fn(){
 
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int main(int argc, char* argv[]){
+
+	const char* file = argv[1];
+
+	WavFile wav;
+	wav.loadfile(file);
+	
 }
