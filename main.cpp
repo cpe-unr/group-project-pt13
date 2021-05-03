@@ -1,6 +1,9 @@
 /** @file */
 #include "readwav.h"
 #include "metadata.h"
+#include "audioProcessing.h"
+#include "echo.h"
+#include "noisegate.h"
 #include <iostream>
 #include <fstream>
 #include <string>
