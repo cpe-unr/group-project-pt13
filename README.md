@@ -23,7 +23,7 @@ and then the program ends.
 Challenges:
 During this programming assignment, we struggled with writing things to a new file. The audio processing
 portion was also pretty difficult for us. We had to do a lot of research but in the end, we put things 
-together. It was a difficult assignment, but we struggled as a team and we did our best. Thank you
+together. It was a difficult assignment, but we struggled as a team and we tried our best ok. Thank you
 for a great semester!
 
 
