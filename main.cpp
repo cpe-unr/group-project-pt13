@@ -29,9 +29,6 @@ using namespace std;
  * \retval        ERR_SUCCESS    The function is successfully executed
  * \retval        ERR_FAILURE    An error occurred
  */
-void fn(){
-
-}
 
 int main(int argc, char* argv[]){
 	/**
@@ -162,8 +159,17 @@ int main(int argc, char* argv[]){
 	 * Writes to a new file after audio processing.
 	 */
 	std::string userFileName;
-	std::cout << "Type in File Name(ex: \"mixtape.wav\" w/out quote marks): ";
-	std::cin >> userFileName;
+	bool nameIsTaken = true;
+	do{
+		std::cout << "Type in File Name(ex: \"mixtape.wav\" w/out quote marks): ";
+		std::cin >> userFileName;
+		if(userFileName == "yes-8bit-mono.wav" || userFileName == "yes-16-bit-mono.wav"){
+		std::cout << "\n--Enter a different file name--" << std::endl;
+		}
+		else{
+			nameIsTaken = false;
+		}
+	}while(nameIsTaken);
 	wav.writeFile(userFileName);
 
 	/**
@@ -178,6 +184,13 @@ int main(int argc, char* argv[]){
 	if(userChoice3 == 1){
 		std::ofstream csvfile;
 		csvfile.open("wavList.csv");
+		if(inam.length() == 0){
+			inam = "No Metadata Present";
+		}
+		
+		if(iart.length() == 0){
+			iart = "No Metadata Present";
+		}
 		csvfile << "FILENAME, INAM, IART,\n";
 		csvfile << userFileName << ", " << inam << ", " << iart << "\n";
 		csvfile.close();
