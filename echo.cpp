@@ -1,8 +1,19 @@
 #include "echo.h"
 
+/**
+ * @brief Construct a new Echo:: Echo object
+ * 
+ * @param delay - Sets the delay rate for the echo in the WAV file.
+ */
 Echo::Echo(int delay): delay(delay){
 }
 
+/**
+ * @brief 
+ * Processes 8-bit mono WAV files with echo.
+ * @param buffer 
+ * @param bufferSize 
+ */
 void Echo::process8bitMonoBuffer(unsigned char* buffer, int bufferSize){
 	uint8_t z = 128;
 	float scale = 0.5F;
@@ -15,7 +26,12 @@ void Echo::process8bitMonoBuffer(unsigned char* buffer, int bufferSize){
 		buffer[j+delay] = (unsigned char)(round(value));
 	}
 }
-
+/**
+ * @brief 
+ * Processes 16-bit mono WAV files with echo.
+ * @param buffer 
+ * @param bufferSize 
+ */
 void Echo::process16bitMonoBuffer(unsigned char* buffer, int bufferSize){
 	int z = 32768;
 	float scale = 0.5F;

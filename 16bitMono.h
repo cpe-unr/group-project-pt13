@@ -1,7 +1,10 @@
 #ifndef BIT16MONO_H
 #define BIT16MONO_H
 #include <string>
-//holds 16 bit mono technical data
+/**
+ * @brief 
+ * Holds 16-bit mono techinical data.
+ */
 typedef struct bit16mono{
 	
 	short numchannels;

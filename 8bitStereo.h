@@ -1,7 +1,11 @@
 #ifndef BIT8STEREO_H
 #define BIT8STEREO_H
 #include <string>
-//holds 8 bit stereo technical data
+
+/**
+ * @brief 
+ * Holds 8-bit stereo technical data.
+ */
 typedef struct bit8stereo{
 	
 	short numchannels;

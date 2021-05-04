@@ -1,7 +1,10 @@
 #ifndef BIT16STEREO_H
 #define BIT16STEREO_H
 #include <string>
-//holds 16 bit stereo technical data.
+/**
+ * @brief 
+ * Holds 16-bit stereo techincal data.
+ */
 typedef struct bit16stereo{
 
 	short numchannels;

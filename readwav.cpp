@@ -1,5 +1,9 @@
 #include "readwav.h"
-
+/**
+ * @brief Reads in the WAV file.
+ * 
+ * @param file 
+ */
 void WavFile::loadfile(const char* file){
 
 	char type[4]; //reads in header, dont need, just read
@@ -21,9 +25,11 @@ void WavFile::loadfile(const char* file){
 	fread(type, sizeof(char), 4, fp); 		//Data ID
 	fread(&subchunk2size, sizeof(int), 1, fp);	//==numsamples*numchannels*bitdepth/8. the number of bytes in the data.
 	
-	/*Checks for 8 bit/16 bit then read in buffer
-	**Then reads in metadata
-	*/
+	/**
+	 * @brief 
+	 * Checks for 8 bit/16 bit then read in buffer,
+	 * then reads in metadata.
+	 */
 	int listchunk, infochunksize1, infochunksize2, infochunksize3, infochunksize4;
 	char md[infochunksize1];
 	char md1[infochunksize2];
@@ -47,7 +53,10 @@ void WavFile::loadfile(const char* file){
 		fread(md1, sizeof(char), infochunksize2, fp);
 		artist=md1;
 
-		//checks for comments in metadata
+		/**
+		 * @brief Checks for comments in the metadata.
+		 * 
+		 */
 		if(numchannels == 2){
 			fread(type, sizeof(char), 4, fp);
 			fread(&infochunksize4, sizeof(int), 1, fp);
@@ -56,7 +65,10 @@ void WavFile::loadfile(const char* file){
 		}
 	}
 	if(bitdepth == 16){
-		//weird, read in 16 bit buffer, i guess it skips all the way to the end
+		/**
+		 * @brief Reads in 16-bit buffer.
+		 * 
+		 */
 		short bit16buffer[subchunk2size];
 		fread(bit16buffer, sizeof(unsigned char), subchunk2size, fp);
 		fread(type, sizeof(char), 4, fp);
@@ -73,7 +85,10 @@ void WavFile::loadfile(const char* file){
 		fread(md1, sizeof(char), infochunksize2, fp);
 		artist=md1;
 
-		//checks for comments in metadata
+		/**
+		 * @brief Checks for comments in the metadata.
+		 * 
+		 */
 		if(numchannels == 2){
 			fread(type, sizeof(char), 4, fp);
 			fread(&infochunksize4, sizeof(int), 1, fp);
@@ -85,5 +100,5 @@ void WavFile::loadfile(const char* file){
 }
 void WavFile::writeFile(std::string newfilename){
 	std::ofstream newfile(newfilename, std::ios::out | std::ios::binary);
-	//newfile.write(theaudio buffer, other info shit i guess idk)
+	//newfile.write(theaudio buffer, other info i guess idk)
 }

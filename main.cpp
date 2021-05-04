@@ -4,6 +4,7 @@
 #include "audioProcessing.h"
 #include "echo.h"
 #include "noisegate.h"
+#include "normalization.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -33,20 +34,28 @@ void fn(){
 }
 
 int main(int argc, char* argv[]){
-	//checking commandline
+	/**
+	 * @brief 
+	 * Checks the command line for correct input.
+	 */
 	int userChoice, userChoice2;	
 	if(argc < 2){
 		std::cout << "Correct usage: " << std::endl;
 		std::cout << argv[0] << " NameOfSample.wav" << std::endl;
 		return 0; 
 	}
-	
-	//loading in file, data
+	/**
+	 * @brief 
+	 * Loads in the WAV file and its data.
+	 */
 	const char* file = argv[1];
 	WavFile wav;
 	wav.loadfile(file);
-
-	//TO MODIFY METADATA -- CHOICE
+	
+	/**
+	 * @brief 
+	 * Gives the user a choice to modify the metadata of the WAV file.
+	 */
 	do{
 	std::cout << "\n**User Choice **" << std::endl;
 	std::cout << "1. Modify Metadata" << std::endl;
@@ -83,9 +92,16 @@ int main(int argc, char* argv[]){
 			break;				
 	}
 	}while(userChoice != 2);
-	//Here: If modified, saves file with new metadata.
+	
+	/**
+	 * @brief 
+	 * If the WAV file is modified, saves the file with new metadata.
+	 */
 
-	//PROCESSORS -- CHOICE
+	/**
+	 * @brief 
+	 * Gives the user a choice to process the audio.
+	 */
 	do{
 	std::cout << "\n** Processors **" << std::endl;
 	std::cout << "1. Normalization" << std::endl;
@@ -99,16 +115,32 @@ int main(int argc, char* argv[]){
 		default:
 			std::cout << "\nEnter a valid option" << std::endl;
 			break;
-		case 1://Normalization			
+		/**
+		 * @brief 
+		 * Normalizes the audio.
+		 */
+		case 1: {
+				if(wav.isMono()){
+				audioProcessor *normalProcessor = new Normalization(10);
+				}
+			}
 			break;
-		case 2: {//Noisegating
+		/**
+		 * @brief 
+		 * Processes the audio with noisegate.
+		 */
+		case 2: {
 				if(wav.isMono()){
 				audioProcessor *noiseProcessor = new Noisegate(20);
 				//noiseProcessor->process8bitMonoBuffer(buffer, wav.buffersize());		
 				}
 			}
 			break;
-		case 3:{//Echo
+		/**
+		 * @brief 
+		 * Processes the audio with echo.
+		 */
+		case 3:{
 				if(wav.isMono()){
 				audioProcessor *echoProcessor = new Echo(20000);
 				//echoProcessor->process8bitMonoBuffer(buffer, wav.buffersize());
@@ -120,12 +152,18 @@ int main(int argc, char* argv[]){
 		}
 	}while(userChoice2 != 4);	
 
-	//After processing, writes to file
+	/**
+	 * @brief 
+	 * Writes to a new file after audio processing.
+	 */
 	std::string userFileName;
 	std::cout << "Type in File Name(ex: \"mixtape.wav\" w/out quote marks): ";
 	std::cin >> userFileName;
 	wav.writeFile(userFileName);
 
-	//CSV FILE -- CHOICE
+	/**
+	 * @brief 
+	 * Gives the user a choice to export to a CSV file.
+	 */
 	return 0;	
 }

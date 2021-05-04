@@ -11,6 +11,10 @@ class Wav{
 
 protected:
 	
+	/**
+	 * @brief Techical info for WAV files.
+	 * 
+	 */
 	int chunksize;
 	int chunk1size;
 	short audioformat;
@@ -18,7 +22,7 @@ protected:
 	int samplerate;
 	int byterate;
 	short samplealignment;
-	short bitdepth; //technical data
+	short bitdepth; 
 	int subchunk2size;
 	std::string artist, songname;
 public:
