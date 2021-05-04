@@ -5,7 +5,6 @@
 #include "echo.h"
 #include "noisegate.h"
 #include "normalization.h"
-#include "checker.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -117,6 +116,7 @@ int main(int argc, char* argv[]){
 		case 1: {
 				if(wav.isMono()){
 				audioProcessor *normalProcessor = new Normalization(10);
+				
 				}
 			}
 			break;
@@ -126,7 +126,8 @@ int main(int argc, char* argv[]){
 		 */
 		case 2: {
 				if(wav.isMono()){
-				audioProcessor *noiseProcessor = new Noisegate(20);		
+				audioProcessor *noiseProcessor = new Noisegate(20);
+						
 				}
 			}
 			break;
@@ -137,7 +138,7 @@ int main(int argc, char* argv[]){
 		case 3:{
 				if(wav.isMono()){
 				audioProcessor *echoProcessor = new Echo(20000);
-
+			
 				}
 			}
 			break;
@@ -155,7 +156,6 @@ int main(int argc, char* argv[]){
 	do{
 		std::cout << "Type in File Name(ex: \"mixtape.wav\" w/out quote marks): ";
 		std::cin >> userFileName;
-		nameIsTaken = checkInput(nameIsTaken);
 		if(userFileName == "yes-8bit-mono.wav" || userFileName == "yes-16-bit-mono.wav"){
 		std::cout << "\n--Enter a different file name--" << std::endl;
 		}
