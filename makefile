@@ -14,4 +14,4 @@ mylib.a: echo.o noisegate.o normalization.o
 	ar suvr mylib.a echo.o noisegate.o normalization.o
 
 clean:
-	rm *.o *.a wavproject
+	rm *.o wavproject
