@@ -4,8 +4,8 @@
 #include <cmath>
 
 /**
- * @brief 
- * Interface for the audioProcessor class.
+ * @brief Interface for the audioProcessor class.
+ * 
  */
 class audioProcessor{
 public:

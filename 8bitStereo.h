@@ -3,8 +3,8 @@
 #include <string>
 
 /**
- * @brief 
- * Holds 8-bit stereo technical data.
+ * @brief Holds 8-bit stereo technical data.
+ * 
  */
 typedef struct bit8stereo{
 	

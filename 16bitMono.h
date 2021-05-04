@@ -2,8 +2,8 @@
 #define BIT16MONO_H
 #include <string>
 /**
- * @brief 
- * Holds 16-bit mono techinical data.
+ * @brief Holds 16-bit mono techinical data.
+ * 
  */
 typedef struct bit16mono{
 	

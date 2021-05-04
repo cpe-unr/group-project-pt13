@@ -9,8 +9,8 @@ Echo::Echo(int delay): delay(delay){
 }
 
 /**
- * @brief 
- * Processes 8-bit mono WAV files with echo.
+ * @brief Processes 8-bit mono WAV files with echo.
+ * 
  * @param buffer 
  * @param bufferSize 
  */
@@ -27,8 +27,8 @@ void Echo::process8bitMonoBuffer(unsigned char* buffer, int bufferSize){
 	}
 }
 /**
- * @brief 
- * Processes 16-bit mono WAV files with echo.
+ * @brief Processes 16-bit mono WAV files with echo.
+ * 
  * @param buffer 
  * @param bufferSize 
  */

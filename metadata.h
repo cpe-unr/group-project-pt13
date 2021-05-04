@@ -11,8 +11,10 @@
 using namespace std;
 
 /**
- * @brief 
- * The Metadata class inherits from the Wav class.
+ * @brief Sets the name of the song and artist.
+ * 
+ * The Metadata class inherits from the Wav class, allowing the files loaded in
+ * to have their metadata changed.
  */
 class Metadata : public Wav{
 	
@@ -28,8 +30,8 @@ Metadata(string songname, string artist){
 	artist=artist;
 }
 /**
- * @brief 
- * Setters allowing the song name and artist to be changed.
+ * @brief Setters allowing the song name and artist to be changed.
+ * 
  * @param songname 
  * @param newsongname 
  */

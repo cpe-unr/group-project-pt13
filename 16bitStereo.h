@@ -2,8 +2,8 @@
 #define BIT16STEREO_H
 #include <string>
 /**
- * @brief 
- * Holds 16-bit stereo techincal data.
+ * @brief Holds 16-bit stereo techincal data.
+ * 
  */
 typedef struct bit16stereo{
 

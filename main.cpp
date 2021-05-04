@@ -88,13 +88,13 @@ int main(int argc, char* argv[]){
 	}while(userChoice != 2);
 	
 	/**
-	 * @brief 
-	 * If the WAV file is modified, saves the file with new metadata.
+	 * @brief If the WAV file is modified, saves the file with new metadata.
+	 * 
 	 */
 
 	/**
-	 * @brief 
-	 * Gives the user a choice to process the audio.
+	 * @brief Gives the user a choice to process the audio.
+	 * 
 	 */
 	do{
 	std::cout << "\n** Processors **" << std::endl;
@@ -110,8 +110,8 @@ int main(int argc, char* argv[]){
 			std::cout << "\nEnter a valid option" << std::endl;
 			break;
 		/**
-		 * @brief 
-		 * Normalizes the audio.
+		 * @brief Normalizes the audio.
+		 * 
 		 */
 		case 1: {
 				if(wav.isMono()){
@@ -121,8 +121,8 @@ int main(int argc, char* argv[]){
 			}
 			break;
 		/**
-		 * @brief 
-		 * Processes the audio with noisegate.
+		 * @brief Processes the audio with noisegate.
+		 * 
 		 */
 		case 2: {
 				if(wav.isMono()){
@@ -148,8 +148,8 @@ int main(int argc, char* argv[]){
 	}while(userChoice2 != 4);	
 
 	/**
-	 * @brief 
-	 * Writes to a new file after audio processing.
+	 * @brief Writes to a new file after audio processing.
+	 * 
 	 */
 	std::string userFileName;
 	bool nameIsTaken = true;
@@ -166,8 +166,8 @@ int main(int argc, char* argv[]){
 	wav.writeFile(userFileName);
 
 	/**
-	 * @brief 
-	 * Gives the user a choice to export to a CSV file.
+	 * @brief Gives the user a choice to export to a CSV file.
+	 * 
 	 */
 	std::cout << "\n**CSV FILE**" << std::endl;
 	std::cout << "1. Make wavList.csv" << std::endl;

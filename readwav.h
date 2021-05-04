@@ -8,6 +8,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * @brief Class that handles reading in and writing in WAV files.
+ * 
+ */
 class WavFile : public Wav{
 public:
 	WavFile(){}
