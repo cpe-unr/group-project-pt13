@@ -38,7 +38,8 @@ int main(int argc, char* argv[]){
 	 * @brief 
 	 * Checks the command line for correct input.
 	 */
-	int userChoice, userChoice2;	
+	int userChoice, userChoice2, userChoice3;
+	std::string inam, iart;	
 	if(argc < 2){
 		std::cout << "Correct usage: " << std::endl;
 		std::cout << argv[0] << " NameOfSample.wav" << std::endl;
@@ -80,8 +81,12 @@ int main(int argc, char* argv[]){
 					std::cout << "\nEnter a valid option" << std::endl;
 					break;
 				case 1:
+					std::cout << "Enter new INAM(No Spaces):" << std::endl;
+					std::cin >> inam;
 					break;
 				case 2:
+					std::cout << "Enter new IART(No Spaces): " << std::endl;
+					std::cin >> iart;
 					break;
 				case 3:					
 					break;
@@ -165,5 +170,18 @@ int main(int argc, char* argv[]){
 	 * @brief 
 	 * Gives the user a choice to export to a CSV file.
 	 */
+	std::cout << "\n**CSV FILE**" << std::endl;
+	std::cout << "1. Make wavList.csv" << std::endl;
+	std::cout << "2. No wavList.csv" << std::endl;
+	std::cout << "Enter your choice: ";
+	std::cin >> userChoice3;
+	if(userChoice3 == 1){
+		std::ofstream csvfile;
+		csvfile.open("wavList.csv");
+		csvfile << "FILENAME, INAM, IART,\n";
+		csvfile << userFileName << ", " << inam << ", " << iart << "\n";
+		csvfile.close();
+	}
+
 	return 0;	
 }
