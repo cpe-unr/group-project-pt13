@@ -1,0 +1,102 @@
+\hypertarget{class_normalization}{}\doxysection{Normalization Class Reference}
+\label{class_normalization}\index{Normalization@{Normalization}}
+
+
+\mbox{\hyperlink{class_normalization}{Normalization}} class handles normalization of WAV files.  
+
+
+
+
+{\ttfamily \#include $<$normalization.\+h$>$}
+
+Inheritance diagram for Normalization\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/df4/class_normalization}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_normalization_ad4b39f2a9aea6fb5d98b15d3a6d5947f}{Normalization}} (float max\+Value)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_normalization}{Normalization}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalization_a0d8b4263f71c8c23ddaaa48787667a3e}{process8bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Normalizes an 8-\/bit mono WAV file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalization_a8dd7a6460c79fe6c6dbded23760d81ff}{process16bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Normalizes a 16-\/bit mono WAV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_normalization}{Normalization}} class handles normalization of WAV files. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_normalization_ad4b39f2a9aea6fb5d98b15d3a6d5947f}\label{class_normalization_ad4b39f2a9aea6fb5d98b15d3a6d5947f}} 
+\index{Normalization@{Normalization}!Normalization@{Normalization}}
+\index{Normalization@{Normalization}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{Normalization()}{Normalization()}}
+{\footnotesize\ttfamily Normalization\+::\+Normalization (\begin{DoxyParamCaption}\item[{float}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_normalization}{Normalization}} object. 
+
+Construct a new \mbox{\hyperlink{class_normalization}{Normalization}}\+:\+: \mbox{\hyperlink{class_normalization}{Normalization}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Value} & -\/ A maximum value for audio level.\\
+\hline
+{\em max\+Value} & -\/ Sets a maximum value for the audio volume. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_normalization_a8dd7a6460c79fe6c6dbded23760d81ff}\label{class_normalization_a8dd7a6460c79fe6c6dbded23760d81ff}} 
+\index{Normalization@{Normalization}!process16bitMonoBuffer@{process16bitMonoBuffer}}
+\index{process16bitMonoBuffer@{process16bitMonoBuffer}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{process16bitMonoBuffer()}{process16bitMonoBuffer()}}
+{\footnotesize\ttfamily void Normalization\+::process16bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Normalizes a 16-\/bit mono WAV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+\mbox{\Hypertarget{class_normalization_a0d8b4263f71c8c23ddaaa48787667a3e}\label{class_normalization_a0d8b4263f71c8c23ddaaa48787667a3e}} 
+\index{Normalization@{Normalization}!process8bitMonoBuffer@{process8bitMonoBuffer}}
+\index{process8bitMonoBuffer@{process8bitMonoBuffer}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{process8bitMonoBuffer()}{process8bitMonoBuffer()}}
+{\footnotesize\ttfamily void Normalization\+::process8bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Normalizes an 8-\/bit mono WAV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+normalization.\+h\item 
+normalization.\+cpp\end{DoxyCompactItemize}

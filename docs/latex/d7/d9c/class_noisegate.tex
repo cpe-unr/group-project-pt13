@@ -1,0 +1,98 @@
+\hypertarget{class_noisegate}{}\doxysection{Noisegate Class Reference}
+\label{class_noisegate}\index{Noisegate@{Noisegate}}
+
+
+\mbox{\hyperlink{class_noisegate}{Noisegate}} classes handles the noisegate of WAV files.  
+
+
+
+
+{\ttfamily \#include $<$noisegate.\+h$>$}
+
+Inheritance diagram for Noisegate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/d9c/class_noisegate}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_noisegate_ad452c5d8cf72d8c19fec978bdbb64b87}{Noisegate}} (uint8\+\_\+t max\+Amp)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_noisegate}{Noisegate}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noisegate_a9818c7b85ef06f9cced7d4c40ec9f478}{process8bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Processes an 8-\/bit WAV file wth noisegating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noisegate_a6b288829f832edc8d21de66fa08aee7f}{process16bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Processes a 16-\/bit WAV file with moisegating. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_noisegate}{Noisegate}} classes handles the noisegate of WAV files. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_noisegate_ad452c5d8cf72d8c19fec978bdbb64b87}\label{class_noisegate_ad452c5d8cf72d8c19fec978bdbb64b87}} 
+\index{Noisegate@{Noisegate}!Noisegate@{Noisegate}}
+\index{Noisegate@{Noisegate}!Noisegate@{Noisegate}}
+\doxysubsubsection{\texorpdfstring{Noisegate()}{Noisegate()}}
+{\footnotesize\ttfamily Noisegate\+::\+Noisegate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{max\+Amp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_noisegate}{Noisegate}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Amp} & -\/ A maximum amplitude. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_noisegate_a6b288829f832edc8d21de66fa08aee7f}\label{class_noisegate_a6b288829f832edc8d21de66fa08aee7f}} 
+\index{Noisegate@{Noisegate}!process16bitMonoBuffer@{process16bitMonoBuffer}}
+\index{process16bitMonoBuffer@{process16bitMonoBuffer}!Noisegate@{Noisegate}}
+\doxysubsubsection{\texorpdfstring{process16bitMonoBuffer()}{process16bitMonoBuffer()}}
+{\footnotesize\ttfamily void Noisegate\+::process16bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes a 16-\/bit WAV file with moisegating. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+\mbox{\Hypertarget{class_noisegate_a9818c7b85ef06f9cced7d4c40ec9f478}\label{class_noisegate_a9818c7b85ef06f9cced7d4c40ec9f478}} 
+\index{Noisegate@{Noisegate}!process8bitMonoBuffer@{process8bitMonoBuffer}}
+\index{process8bitMonoBuffer@{process8bitMonoBuffer}!Noisegate@{Noisegate}}
+\doxysubsubsection{\texorpdfstring{process8bitMonoBuffer()}{process8bitMonoBuffer()}}
+{\footnotesize\ttfamily void Noisegate\+::process8bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes an 8-\/bit WAV file wth noisegating. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+noisegate.\+h\item 
+noisegate.\+cpp\end{DoxyCompactItemize}

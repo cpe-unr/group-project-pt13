@@ -1,0 +1,87 @@
+\hypertarget{class_wav_file}{}\doxysection{Wav\+File Class Reference}
+\label{class_wav_file}\index{WavFile@{WavFile}}
+
+
+Class that handles reading in and writing in WAV files.  
+
+
+
+
+{\ttfamily \#include $<$readwav.\+h$>$}
+
+Inheritance diagram for Wav\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d83/class_wav_file}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_wav_file_a5a8d36a5212ad9fcea18454b716acfd0}{loadfile}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Reads in the WAV file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_wav_file_a40cfa2110062322eac18098f92f90f92}\label{class_wav_file_a40cfa2110062322eac18098f92f90f92}} 
+void {\bfseries write\+File} (string newfile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class that handles reading in and writing in WAV files. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wav_file_a5a8d36a5212ad9fcea18454b716acfd0}\label{class_wav_file_a5a8d36a5212ad9fcea18454b716acfd0}} 
+\index{WavFile@{WavFile}!loadfile@{loadfile}}
+\index{loadfile@{loadfile}!WavFile@{WavFile}}
+\doxysubsubsection{\texorpdfstring{loadfile()}{loadfile()}}
+{\footnotesize\ttfamily void Wav\+File\+::loadfile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Reads in the WAV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+reads in header, dont need, just read
+
+\mbox{\hyperlink{class_wav}{Wav}} format is the same
+
+riff header
+
+Wave format type, contains FMT and Data
+
+FMT subchunk, describes the sound data\textquotesingle{}s format
+
+Total number of data within the fmt chunk
+
+PCM=1, if PCM != 1, file has some sort of compression
+
+Mono=1, Stereo=2.
+
+8000, 44100, etc.
+
+samplerate$\ast$numchannels$\ast$bitdepth/8
+
+number of bytes for one sample including all channels
+
+Bits per sample, 8-\/bit, 16-\/bit, 24-\/bit, etc.
+
+Data ID
+
+==numsamples$\ast$numchannels$\ast$bitdepth/8. the number of bytes in the data.
+
+Checks for 8 bit/16 bit then read in buffer, then reads in metadata.
+
+Checks for comments in the metadata.
+
+Reads in 16-\/bit buffer.
+
+Checks for comments in the metadata.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+readwav.\+h\item 
+readwav.\+cpp\end{DoxyCompactItemize}

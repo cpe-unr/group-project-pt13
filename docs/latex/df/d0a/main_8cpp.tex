@@ -1,0 +1,58 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include \char`\"{}readwav.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}metadata.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio\+Processing.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}echo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}noisegate.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}normalization.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Reads in a WAV file and walks the user through with a menu. They can decide whether or not to modify the WAV file\textquotesingle{}s metadata or not. If they choose to, the program saves the file with new metadata. The user can then choose to process the audio. After processing, a new file is written. The user then chooses if they would like to export as a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Reads in a WAV file and walks the user through with a menu. They can decide whether or not to modify the WAV file\textquotesingle{}s metadata or not. If they choose to, the program saves the file with new metadata. The user can then choose to process the audio. After processing, a new file is written. The user then chooses if they would like to export as a CSV file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Checks the command line for correct input.
+
+Loads in the WAV file and its data.
+
+Gives the user a choice to modify the metadata of the WAV file.
+
+If the WAV file is modified, saves the file with new metadata.
+
+Gives the user a choice to process the audio.
+
+Normalizes the audio.
+
+Processes the audio with noisegate.
+
+Processes the audio with echo.
+
+Writes to a new file after audio processing.
+
+Gives the user a choice to export to a CSV file.

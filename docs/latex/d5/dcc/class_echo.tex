@@ -1,0 +1,102 @@
+\hypertarget{class_echo}{}\doxysection{Echo Class Reference}
+\label{class_echo}\index{Echo@{Echo}}
+
+
+\mbox{\hyperlink{class_echo}{Echo}} class handles the echo of WAV files.  
+
+
+
+
+{\ttfamily \#include $<$echo.\+h$>$}
+
+Inheritance diagram for Echo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/dcc/class_echo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_echo_a9531515ffab8be1e38cbdc0e0e9338a6}{Echo}} (int delay)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_echo}{Echo}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_a00060f360090e444f60bb10b9aeea977}{process8bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Processes 8-\/bit mono WAV files with echo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_acc62b8e5914e47fa3e5f5da1a752cf0b}{process16bit\+Mono\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em Processes 16-\/bit mono WAV files with echo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_echo}{Echo}} class handles the echo of WAV files. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_echo_a9531515ffab8be1e38cbdc0e0e9338a6}\label{class_echo_a9531515ffab8be1e38cbdc0e0e9338a6}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{int}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_echo}{Echo}} object. 
+
+Construct a new \mbox{\hyperlink{class_echo}{Echo}}\+:\+: \mbox{\hyperlink{class_echo}{Echo}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & -\/ The delay rate of the WAV file.\\
+\hline
+{\em delay} & -\/ Sets the delay rate for the echo in the WAV file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_echo_acc62b8e5914e47fa3e5f5da1a752cf0b}\label{class_echo_acc62b8e5914e47fa3e5f5da1a752cf0b}} 
+\index{Echo@{Echo}!process16bitMonoBuffer@{process16bitMonoBuffer}}
+\index{process16bitMonoBuffer@{process16bitMonoBuffer}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{process16bitMonoBuffer()}{process16bitMonoBuffer()}}
+{\footnotesize\ttfamily void Echo\+::process16bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes 16-\/bit mono WAV files with echo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+\mbox{\Hypertarget{class_echo_a00060f360090e444f60bb10b9aeea977}\label{class_echo_a00060f360090e444f60bb10b9aeea977}} 
+\index{Echo@{Echo}!process8bitMonoBuffer@{process8bitMonoBuffer}}
+\index{process8bitMonoBuffer@{process8bitMonoBuffer}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{process8bitMonoBuffer()}{process8bitMonoBuffer()}}
+{\footnotesize\ttfamily void Echo\+::process8bit\+Mono\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes 8-\/bit mono WAV files with echo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classaudio_processor}{audio\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+echo.\+h\item 
+echo.\+cpp\end{DoxyCompactItemize}
