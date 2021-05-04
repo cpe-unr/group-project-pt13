@@ -9,27 +9,19 @@
 #include <fstream>
 #include <string>
 using namespace std;
-/**
- * \brief   The function bar.
- *
- * \details This function does something which is doing nothing. So this text
- *          is totally senseless and you really do not need to read this,
- *          because this text is basically saying nothing.
- *
- * \note    This text shall only show you, how such a \"note\" section
- *          is looking. There is nothing which really needs your notice,
- *          so you do not really need to read this section.
- *
- * \param[in]     a    Description of parameter a.
- * \param[out]    b    Description of the parameter b.
- * \param[in,out] c    Description of the parameter c.
- *
- * \return        The error return code of the function.
- *
- * \retval        ERR_SUCCESS    The function is successfully executed
- * \retval        ERR_FAILURE    An error occurred
- */
 
+/**
+ * @brief Reads in a WAV file and walks the user through with a menu.
+ * They can decide whether or not to modify the WAV file's metadata or not.
+ * If they choose to, the program saves the file with new metadata.
+ * The user can then choose to process the audio.
+ * After processing, a new file is written.
+ * The user then chooses if they would like to export as a CSV file.
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, char* argv[]){
 	/**
 	 * @brief 
@@ -124,6 +116,7 @@ int main(int argc, char* argv[]){
 		case 1: {
 				if(wav.isMono()){
 				audioProcessor *normalProcessor = new Normalization(10);
+				//noiseProcessor->process8bitMonoBuffer(buffer, wav.buffersize());
 				}
 			}
 			break;

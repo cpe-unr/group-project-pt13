@@ -19,13 +19,13 @@ Normalization::Normalization(float maxValue) : maxValue(maxValue){}
 void Normalization::process8bitMonoBuffer(unsigned char* buffer, int bufferSize)
 {
     float maxValue = 0;
-    for (size_t i = 0; i < mono.size(); ++i)
+    for (size_t i = 0; i < audio.size(); ++i)
     {
-        maxValue = max(maxValue, abs(mono[i]));
+        maxValue = max(maxValue, abs(audio[i]));
     }
-    for (size_t i = 0; i < mono.size(); ++i)
+    for (size_t i = 0; i < audio.size(); ++i)
     {
-        mono[i] = mono[i] / maxValue;
+        audio[i] = audio[i] / maxValue;
     }
     
 }
@@ -37,5 +37,12 @@ void Normalization::process8bitMonoBuffer(unsigned char* buffer, int bufferSize)
  */
 void Normalization::process16bitMonoBuffer(unsigned char* buffer, int bufferSize)
 {
-    
+   for (size_t i = 0; i < audio.size(); ++i)
+    {
+        maxValue = max(maxValue, abs(audio[i]));
+    }
+    for (size_t i = 0; i < audio.size(); ++i)
+    {
+        audio[i] = audio[i] / maxValue;
+    }
 }

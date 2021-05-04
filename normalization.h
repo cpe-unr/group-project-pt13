@@ -10,8 +10,7 @@
  */
 class Normalization : public audioProcessor{
     float maxValue;
-    std::vector<float> mono;
-    std::vector<std::vector<float> > stereo;
+    std::vector<float> audio;
 public:
     /**
      * @brief Construct a new Normalization object.
